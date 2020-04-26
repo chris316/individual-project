@@ -1,0 +1,135 @@
+<div class="test">
+    <h1 class="heading">JOOLE Compare</h1>
+    <div class="userProject">
+        <button type="button" class="projectButton" (click)="goToProjects()">Projects</button>
+        <button type="menu" class="user" (click)="logout()"></button>
+     </div>
+</div>
+
+<div class="container">
+    <button type="button" class="backBtn" (click)=back()>Back</button> 
+    <div class="tableContainer">
+        <table class="fanTable">
+            <tr>
+                <td></td>
+                <td *ngFor="let fan of compareArray;" class="dataBorder">
+                    <div class="addContainer">
+                        <select class="projectSelect" [(ngModel)]="projects" name="addProject" (change)="addToProject(fan)">
+                            <option *ngFor="let project of projectsArray" [value]="project.id">{{project.projectName}}</option>
+                        </select>
+                    </div>
+                    <div class="imageDiv">
+                        <img class="imagePic" src={{fan.imageLink}}>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tableHeader">DESCRIPTION</td>
+                <td *ngFor="let fan of compareArray;" class="tableHeader"></td>
+            </tr>
+            <tr>
+                <td class="tableTitles">
+                    <div>
+                        <p>Manufacturer</p>
+                        <p>Series</p>
+                        <p>Model</p>
+                    </div>
+                </td>
+                <td *ngFor="let fan of compareArray;" class="dataBorderInfo">
+                    <div class="modelDetails">
+                        <p class="modelParam">{{fan.manufacturer}}</p>
+                        <p class="modelParam">{{fan.series}}</p>
+                        <p class="modelParam">{{fan.model}}</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tableHeader">TYPE</td>
+                <td *ngFor="let fan of compareArray;" class="tableHeader"></td>
+            </tr>
+            <tr>
+                <td class="tableTitles">
+                    <div>
+                        <p>Use Type</p>
+                        <p>Application</p>
+                        <p>Mounting Location</p>
+                        <p>Accessories</p>
+                        <p>Model Year</p>
+                    </div>
+                </td>
+                <td *ngFor="let fan of compareArray;" class="dataBorderInfo">
+                    <div class="modelDetails">
+                        <p class="modelParam">{{fan.useType}}</p>
+                        <p class="modelParam">{{fan.application}}</p>
+                        <p class="modelParam">{{fan.mountingLocation}}</p>
+                        <p class="modelParam">{{fan.accessories}}</p>
+                        <p class="modelParam">{{fan.modelYear}}</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="tableHeader">TECHNICAL SPECIFICATIONS</td>
+                <td *ngFor="let fan of compareArray;" class="tableHeader"></td>
+            </tr>
+            <tr>
+                <td class="tableTitles1">
+                    <div>
+                        <p>Airflow (CFM)</p>
+                        <p>Number of Fan Speeds</p>
+                        <p>Sound at max speed (dBA)</p>
+                        <p>Fan Sweep Diameter (in)</p>
+                        <p>Weight (lbs)</p>
+                        <p>Power (W)</p>
+                        <p>Operating Voltage (VAC)</p>
+                        <p>Fan Speed (RPM)</p>
+                        <p>Height (in)</p>
+                    </div>
+                </td>
+                <td *ngFor="let fan of compareArray;" class="dataBorder">
+                    <div class="modelDetails">
+                        <p class="param">{{fan.airflow}}</p>
+                        <p class="param">{{fan.numFanSpeeds}}</p>
+                        <p class="param">{{fan.sound}}</p>
+                        <p class="param">{{fan.sweepDiameter}}</p>
+                        <p class="param">{{fan.weight}}</p>
+                        <div class="minDiv">
+                            <p class="paramDetails">Min</p>
+                            <p class="doubleParam">{{fan.powerMin}}</p>
+                        </div>
+                        <div class="maxDiv">
+                            <p class="paramDetails">Max</p>
+                            <p class="doubleParam">{{fan.powerMax}}</p>
+                        </div>
+                        <div class="minDiv">
+                          <p class="paramDetails">Min</p>
+                            <p class="doubleParam">{{fan.operatingVoltageMin}}</p>
+                        </div>
+                        <div class="maxDiv">
+                            <p class="paramDetails">Max</p>
+                            <p class="doubleParam">{{fan.operatingVoltageMax}}</p>
+                        </div>
+                        <div class="minDiv">
+                            <p class="paramDetails">Min</p>
+                              <p class="doubleParam">{{fan.fanSpeedMin}}</p>
+                          </div>
+                          <div class="maxDiv">
+                              <p class="paramDetails">Max</p>
+                              <p class="doubleParam">{{fan.fanSpeedMax}}</p>
+                          </div>
+                          <div class="minDiv">
+                            <p class="paramDetails">Min</p>
+                              <p class="doubleParam">{{fan.heightMin}}</p>
+                          </div>
+                          <div class="maxDiv">
+                              <p class="paramDetails">Max</p>
+                              <p class="doubleParam">{{fan.heightMax}}</p>
+                          </div>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+
+
+    </div>
+</div>

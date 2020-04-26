@@ -1,0 +1,55 @@
+<div class="test">
+    <h1 class="heading">JOOLE Project</h1>
+    <div class="userProject">
+        <button type="button" class="projectButton" (click)="goToFans()">Back to Fans</button>
+        <button type="menu" class="user" (click)="logout()"></button>
+     </div>
+</div>
+
+<div class="topContainer">
+    <div class="titleHeader">
+        <p>Project Name:</p>
+        <p>Project Address:</p>
+        <p>Project Type:</p>
+        <p>Project Size:</p>
+        <p>Client Name:</p>
+    </div>
+
+    <div class="right">
+    <p >{{projectsArray[0].projectName}}</p>
+    <p >{{projectsArray[0].address}}</p>
+    <p >{{projectsArray[0].projectType}}</p>
+    <p >{{projectsArray[0].projectSize}}</p>
+    <p >{{projectsArray[0].client}}</p>
+    </div>
+</div>
+
+<p class="title">Fans in Project:</p>
+
+<div class="tableContainer">
+    <table class="fanTable">
+        <tr>
+            <td *ngFor="let fan of fanArray; let index=index;">
+                <div class="fanData">
+                    <div class="imageDiv" (click)="loadFanData(fan)">
+                        <img class="imagePic" src={{fan.imageLink}}>
+                    </div>
+                    <div class="modelDetails" (click)="loadFanData(fan)">
+                        <p class="modelParam">{{fan.manufacturer}}</p>
+                        <p class="modelParam">{{fan.series}}</p>
+                        <p class="modelParam">{{fan.model}}</p>
+                    </div>
+                    <div class="extraOptions">
+                        <p class="price">${{fan.price}}</p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+
+
+
+
+
+</div>

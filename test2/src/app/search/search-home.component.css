@@ -1,0 +1,158 @@
+.test{
+    width:100vw;
+    height:100vh;
+    background-image:linear-gradient(rgba(43, 172, 223, 0.692), rgba(255, 255, 255, 0.5));
+}
+
+.searchHeader{
+    position:fixed;
+    top:15%;
+    left:45%;
+    font-size:30px;
+}
+
+.userProject{
+    margin-top:20px;
+    margin-right:20px;
+}
+
+.user{
+    float:right;
+    width: 75px;
+    height: 75px;
+    margin-top:10px;
+    margin-right:10px;
+    border-radius: 50%;
+    background-image:url("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.projectButton{
+    line-height:20px;
+    width:75px;
+    font-size:12pt;
+    font-family:tahoma;
+    margin-top:60px;
+    margin-right:100px;
+    position:absolute;
+    top:0;
+    right:0;
+    color:black;
+    background:transparent;
+    border:none;
+    outline:none;
+}
+
+.searchContainer{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-justify: auto;
+    text-align: justify;
+    width:38%;
+    overflow:hidden;
+}
+
+.centerTitle{
+    text-align: center;
+    color:rgb(17, 17, 153);
+    font-size:35px;
+    font-weight:bold;
+}
+
+.centerTitle1{
+    text-align: center;
+    color:rgb(17, 17, 153);
+    font-size:25px;
+    font-weight:bold;
+}
+
+.form-group{
+    text-align: right;
+}
+
+.form-control{
+    width:100%;
+    line-height:20px;
+    margin-top:20px;
+}
+
+.searchBtn{
+    float:right;
+    line-height: 15px;
+    font-size: 12px;
+    margin-right:135px;
+    height:25px;
+    width:25px;
+    border-radius:4px;
+    background-image:url("https://img.favpng.com/10/4/11/computer-icons-search-box-button-clip-art-png-favpng-7TdWywgFBhJ2y81D9kE6nhjbT.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:white;
+    background-color: white;
+    border-color:white;
+    outline-color: white;
+}
+
+
+
+
+
+
+.searchSelect{
+    width:100px;
+    height:24px;
+    float:left;
+    border-radius:4px;
+    background-color:rgb(163, 159, 159);
+}
+
+
+
+.combobox {
+    width:500px;
+}
+.combobox-input {
+    width: 300px;
+    border: none;
+    padding: 5px;
+    font-size: 12px;
+    border-bottom: 2px solid rgb(165, 112, 112);
+}
+.combobox-input:focus {
+    outline-style: none;
+}
+.combobox-options {
+    position: fixed;
+    top:44%;
+    left:16%;
+    text-align: center;
+    background-color: white;
+    width: 310px;
+    max-height: 50px;
+    overflow-y: auto;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    z-index: 1;
+}
+.selected {
+    color: cornsilk;
+    background-color: rgb(165, 112, 112);
+}
+list-item {
+    display: block;
+    font-size: 12px;
+    padding: 5px;
+}
+list-item:hover {
+    background-color: grey;
+    color: white;
+}
+.error-text {
+    color: rgb(165, 112, 112);
+}
+.error {
+    border: 1px solid red;
+}

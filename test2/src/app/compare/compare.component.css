@@ -1,0 +1,151 @@
+.test{
+    width:100vw;
+    height:15vh;
+    background-image:linear-gradient(rgba(43, 172, 223, 0.692), rgba(255, 255, 255, 0.5));
+}
+
+.heading{
+    color:rgb(36, 36, 143);
+}
+
+.userProject{
+    margin-top:10px;
+    margin-right:20px;
+}
+
+.user{
+    position:absolute;
+    width: 75px;
+    height: 75px;
+    margin-top:-56px;
+    margin-left:1260px;
+    border-radius: 50%;
+    background-image:url("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.projectButton{
+    line-height:20px;
+    width:75px;
+    font-size:12pt;
+    font-family:tahoma;
+    margin-top:40px;
+    margin-right:100px;
+    position:absolute;
+    top:0;
+    right:0;
+    color:black;
+    background:transparent;
+    border:none;
+    outline:none;
+}
+
+
+.backBtn{
+    float:left;
+    margin-left:10px;
+    color:white;
+    background-color: rgb(61, 58, 58);
+    border-color:rgb(61, 58, 58);
+    outline-color:rgb(61, 58, 58);
+}
+
+.tableContainer{
+    background-color: white;
+    width:1000px;
+    float:left;
+}
+
+.dataBorder{
+    width:600px;
+    height:100px;
+    background-color:white;
+    border-style:groove;
+    border-color:rgb(224, 223, 223);
+    border-radius: 1px;
+}
+
+.addContainer{
+    width:100%;
+    height:50px;
+}
+
+.imageDiv{
+    width:100%;
+    height:200px;
+}
+
+.imagePic{
+    width:100%;
+    height:100%;
+}
+
+.tableHeader{
+    width:400px;
+    text-align: top;
+    background-color:white;
+    border-style:groove;
+    border-color:rgb(224, 223, 223);
+    border-radius: 1px;
+}
+
+.tableTitles{
+    line-height:10px;
+    width:400px;
+    text-align:left;
+    background-color:rgb(207, 207, 207);
+    border-style:groove;
+    border-color:rgb(224, 223, 223);
+    border-radius: 1px;
+}
+
+.tableTitles1{
+    width:400px;
+    text-align:left;
+    background-color:rgb(207, 207, 207);
+    border-style:groove;
+    border-color:rgb(224, 223, 223);
+    border-radius: 1px;
+    line-height:20px;
+}
+
+.dataBorderInfo{
+    text-align:center;
+    line-height:10px;
+    background-color:white;
+    border-style:groove;
+    border-color:rgb(224, 223, 223);
+    border-radius: 1px;
+}
+
+.param{
+    text-align:center;
+    line-height:12px;
+}
+
+.minDiv{
+    width:50%;
+    float:left;
+    overflow:hidden;
+}
+
+.maxDiv{
+    width:50%;
+    float:right;
+    overflow:hidden;
+}
+
+.paramDetails{
+    width:50%;
+    height:100%;
+    float:left;
+    background-color:rgb(207, 207, 207);
+}
+
+.doubleParam{
+    width:50%;
+    height:100%;
+    float:right;
+    text-align:center;
+}

@@ -1,0 +1,109 @@
+<div class="test">
+
+    <h1 class="heading">JOOLE                              Search</h1>
+    <div class="userProject">
+        <button type="button" class="projectButton" (click)="goToProjects()">Projects</button>
+        <button type="menu" class="user" (click)="logout()"></button>
+     </div>
+    <div class="searchTable">
+        <form (ngSubmit)="onSubmit(searchForm)" #searchForm="ngForm">
+            <div class="buttonsDiv">
+                <label for="searchBtn">Search: </label>
+                <button type="submit" class="searchBtn" [disabled]="!searchForm.form.valid">Search</button>
+                <button type="button" class="clearBtn" (click)="clearSearch(searchForm)">Clear</button>
+            </div>
+            <div class="productType">
+                <label>Accessories:</label>
+                <input type="radio" value="With light" name="accessory" ngModel>With light
+                <input type="radio" value="Without light" name="accessory" ngModel>Without Light
+            </div>
+            <br/>
+            <div class="modelYear">
+                <label>Model Year:</label>
+                <input type="text" class="modelYearInput" id="modelYearMin" [(ngModel)]="modelYearMin" [ngModelOptions]="{standalone:true}">
+                <label>-</label>
+                <input type="text" class="modelYearInput" id="modelYearMax" [(ngModel)]="modelYearMax" [ngModelOptions]="{standalone:true}">
+            </div>
+            <br/>
+            <div class="airflowDiv">
+                <label>Airflow (CFM)</label><br/>
+                <input type="text" class="airflowInput" id="airflowMin" [(ngModel)]="airflowMin" [ngModelOptions]="{standalone:true}" placeholder="0">
+                <input type="range" class="airflowRange" min="0" max="20000" [(ngModel)]="airflowMax" [ngModelOptions]="{standalone:true}" value="0">
+                <input type="text" class="airflowInput" id="airflowMax" [(ngModel)]="airflowMax" [ngModelOptions]="{standalone:true}" placeholder="20000">
+            </div>
+            <br/>
+            <div class="powerDiv">
+                <label>Power (W)</label><br/>
+                <input type="text" class="powerInput" id="powerMin" [(ngModel)]="powerMin" [ngModelOptions]="{standalone:true}" placeholder="0">
+                <input type="range" class="powerRange" min="0" max="100" [(ngModel)]="powerMax" [ngModelOptions]="{standalone:true}" value="0">
+                <input type="text" class="powerInput" id="powerMax" [(ngModel)]="powerMax" [ngModelOptions]="{standalone:true}" placeholder="100">
+            </div>
+            <br/>
+            <div class="soundDiv">
+                <label>Sound at max speed (dBA)</label><br/>
+                <input type="text" class="soundInput" id="soundMin" [(ngModel)]="soundMin" [ngModelOptions]="{standalone:true}" placeholder="0">
+                <input type="range" class="soundRange" min="0" max="80" [(ngModel)]="soundMax" [ngModelOptions]="{standalone:true}" value="0">
+                <input type="text" class="soundInput" id="soundMax" [(ngModel)]="soundMax" [ngModelOptions]="{standalone:true}" placeholder="80">
+            </div>
+            <br/>
+            <div class="sweepDiv">
+                <label>Fan sweep diameter (in)</label><br/>
+                <input type="text" class="sweepInput" id="sweepMin" [(ngModel)]="sweepMin" [ngModelOptions]="{standalone:true}" placeholder="0">
+                <input type="range" class="sweepRange" min="0" max="100" [(ngModel)]="sweepMax" [ngModelOptions]="{standalone:true}" value="0">
+                <input type="text" class="sweepInput" id="sweepMax" [(ngModel)]="sweepMax" [ngModelOptions]="{standalone:true}" placeholder="100">
+            </div>
+            <br/>
+            <div class="speedDiv">
+                <label>Fan speed (RPM)</label><br/>
+                <input type="text" class="speedInput" id="speedMin" [(ngModel)]="speedMin" [ngModelOptions]="{standalone:true}" placeholder="0">
+                <input type="range" class="speedRange" min="0" max="300" [(ngModel)]="speedMax" [ngModelOptions]="{standalone:true}" value="0">
+                <input type="text" class="speedInput" id="speedMax" [(ngModel)]="speedMax" [ngModelOptions]="{standalone:true}" placeholder="300">
+            </div>
+            <br/>
+            <div class="manufacturerDiv">
+                <label>Manufacturer:</label>
+                <input type="text" class="manufacturerInput" id="manufacturer" [(ngModel)]="manufacturer" [ngModelOptions]="{standalone:true}" placeholder="manufacturer">
+            </div>
+            <br/>
+            <div class="seriesDiv">
+                <label>Series:</label>
+                <input type="text" class="seriesInput" id="series" [(ngModel)]="series" [ngModelOptions]="{standalone:true}" placeholder="series">
+            </div>
+            
+
+        </form>
+    </div>
+    <div class="tableContainer">
+    <form (ngSubmit)="onCompare(compareForm)" #compareForm="ngForm">
+    <table class="fanTable">       
+         <button type="submit" class="compareBtn" [disabled]="!compareForm.form.valid">Compare Selection</button>
+            <tr>
+                <td *ngFor="let fan of fanArray; let index=index;">
+                    <div class="fanData">
+                        <div class="imageDiv" (click)="loadFanData(fan)">
+                            <img class="imagePic" src={{fan.imageLink}}>
+                        </div>
+                        <div class="modelDetails" (click)="loadFanData(fan)">
+                            <p class="modelParam">{{fan.manufacturer}}</p>
+                            <p class="modelParam">{{fan.series}}</p>
+                            <p class="modelParam">{{fan.model}}</p>
+                        </div>
+                        <div class="runningDetails" (click)="loadFanData(fan)">
+                            <p class="runParamT">{{fan.airflow}} CFM</p>
+                            <p class="runParam">{{fan.powerMax}} W at max speed</p>
+                            <p class="runParam">{{fan.sound}} dBA at max speed</p>
+                            <p class="runParamB">{{fan.sweepDiameter}}" fan sweep diameter</p>
+                        </div>
+                        <div class="extraOptions">
+                            <input type="checkbox" [(ngModel)]="fanArray[index].checked" [ngModelOptions]="{standalone:true}"/>compare
+                            <select class="projectSelect" [(ngModel)]="projects" name="addProject" (change)="addToProject(fan)">
+                                <option *ngFor="let project of projectsArray" [value]="project.id">{{project.projectName}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+    </table>
+    </form>
+    </div>
+</div>

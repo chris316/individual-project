@@ -1,0 +1,26 @@
+<div class="test">
+    <button type="button" class="loginButton" (click)="goToLogin()">Login</button>
+    <div class="registerContainer">
+      <p class="centerTitle">JOOLE</p>
+      <p class="centerTitle1">Sign Up Page</p>
+    <form (ngSubmit)="onSubmit(registerForm)" #registerForm="ngForm">
+      <div class="form-group">
+        <input type="text" class="form-control" id="username"
+       required
+       [(ngModel)]="user.username" name="username" placeholder="Username or Password">
+      </div>
+
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" required  
+        [(ngModel)]="user.password" name="password" placeholder="Password"> 
+      </div>
+      <button type="submit" class="registerBtn" [disabled]="!registerForm.form.valid">Sign up</button>
+
+    </form>
+    <br/>
+    <div>
+      <p *ngIf="notRegistered">Wrong information entered</p>
+    </div>
+    </div>
+
+</div>

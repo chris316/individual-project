@@ -1,0 +1,106 @@
+<div class="test">
+    <h1 class="heading">JOOLE Details</h1>
+    <div class="userProject">
+        <button type="button" class="projectButton" (click)="goToProject()">Projects</button>
+        <button type="menu" class="user" (click)="logout()"></button>
+     </div>
+</div>
+
+<div class="container">
+    <button type="button" class="backBtn" (click)=back()>Back</button> 
+
+    <div class="topDiv"> 
+        <div class="imageDiv">
+            <img class="imagePic" src={{fanDetails.imageLink}}>
+        </div>
+        <p class="modelHeader">
+            {{fanDetails.manufacturer}}/{{fanDetails.series}}/{{fanDetails.model}}
+        </p>
+        <select class="projectSelect" [(ngModel)]="projects" name="addProject" (change)="addToProject()">
+            <option *ngFor="let project of projectsArray" [value]="project.id">{{project.projectName}}</option>
+        </select>
+    </div>
+    <div class="buttonsDiv">
+        <span class="centerParam">Product Summary</span>
+        <span class="centerParam">Product Details</span>
+        <span class="centerParam">Product Documentation</span>
+        <span class="centerParam">Contact</span>
+    </div>
+    <p class="Title">Product Summary</p>
+    <div class="topContainer">
+        <p class="paramHeaderBorder">DESCRIPTION</p>
+        <div class="titleHeader">
+          <p class="paramHeader">Manufacturer</p>
+          <p class="paramHeader">Series</p>
+          <p class="paramHeader">Model</p>
+        </div>
+        <div class="right">    
+            <p class="paramData">{{fanDetails.manufacturer}}</p>
+            <p class="paramData">{{fanDetails.series}}</p>
+         <p class="paramData">{{fanDetails.model}}</p>
+        </div>
+        <div class="topContainer">
+        <p class="paramHeaderBorder">TYPE</p>
+        <div class="titleHeader">
+            <p class="paramHeader">Use Type</p>
+            <p class="paramHeader">Application</p>
+            <p class="paramHeader">Mounting Location</p>
+            <p class="paramHeader">Accessories</p>
+            <p class="paramHeader">Model Year</p>
+        </div>
+        <div class="right">    
+        <p class="paramData">{{fanDetails.useType}}</p>
+        <p class="paramData">{{fanDetails.application}}</p>
+        <p class="paramData">{{fanDetails.mountingLocation}}</p>
+        <p class="paramData">{{fanDetails.accessories}}</p>
+        <p class="paramData">{{fanDetails.modelYear}}</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="topContainer">
+        <p class="paramHeaderBorder">TECHNICAL SPECIFICATIONS</p>
+        <div class="titleHeader">
+        <p class="paramHeader">Airflow (CFM)</p>
+        <p class="paramHeader">Power Minimum (W)</p>
+        <p class="paramHeader">Power Maximum (W)</p>
+        <p class="paramHeader">Operating Voltage Minimum (VAC)</p>
+        <p class="paramHeader">Operating Voltage Maximum (VAC)</p>
+        <p class="paramHeader">Fan Speed Minimum (RPM)</p>
+            <p class="paramHeader">Fan Speed Maximum (RPM)</p>
+        <p class="paramHeader">Number of Fan Speeds</p>
+        <p class="paramHeader">Sound at max speed (dBA)</p>
+        <p class="paramHeader">Fan sweep diameter (in)</p>
+        <p class="paramHeader">Height Minimum(in)</p>
+            <p class="paramHeader">Height Maximum(in)</p>
+        <p class="paramHeader">Weight (lbs)</p>
+        </div>
+        <div class="right1">
+        <p class="paramData">{{fanDetails.airflow}}</p>
+        <p class="paramData">{{fanDetails.powerMin}}</p>
+        <p class="paramData">{{fanDetails.powerMax}}</p>
+        <p class="paramData">{{fanDetails.operatingVoltageMin}}</p>
+        <p class="paramData">{{fanDetails.operatingVoltageMax}}</p>
+            <p class="paramData">{{fanDetails.fanSpeedMin}}</p>
+            <p class="paramData">{{fanDetails.fanSpeedMax}}</p>
+        <p class="paramData">{{fanDetails.numFanSpeeds}}</p>
+        <p class="paramData">{{fanDetails.sound}}</p>
+        <p class="paramData">{{fanDetails.sweepDiameter}}</p>
+            <p class="paramData">{{fanDetails.heightMin}}</p>
+            <p class="paramData">{{fanDetails.heightMax}}</p>
+        <p class="paramData">{{fanDetails.weight}}</p>
+    </div>
+    </div>
+    <p class="Title">Product Details</p>
+    <div class="fanDescription">
+        <p class="description">{{fanDetails.prodDetails}}</p>
+    </div>
+    <p class="Title">Product Documentation</p>
+    <br/>
+    <span>Specification Sheet: </span>
+    <p><a (click)="goToLink()">{{fanDetails.specSheet}}</a></p>
+    <p class="Title">Contact</p>
+    <span>Company Website: </span>
+    <p><a (click)="goToLink()">{{fanDetails.specSheet}}</a></p>
+
+</div>

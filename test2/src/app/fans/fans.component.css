@@ -1,0 +1,224 @@
+.test{
+    width:100vw;
+    height:100vh;
+    background-image:linear-gradient(rgba(43, 172, 223, 0.692), rgba(255, 255, 255, 0.5));
+}
+.heading{
+    color:rgb(36, 36, 143);
+}
+
+.userProject{
+    margin-top:10px;
+    margin-right:20px;
+}
+
+.user{
+    position:absolute;
+    width: 65px;
+    height: 65px;
+    margin-top:-55px;
+    margin-left:1400px;
+    border-radius: 50%;
+    background-image:url("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.projectButton{
+    line-height:20px;
+    width:75px;
+    font-size:12pt;
+    font-family:tahoma;
+    margin-top:40px;
+    margin-right:100px;
+    position:absolute;
+    top:0;
+    right:0;
+    color:black;
+    background:transparent;
+    border:none;
+    outline:none;
+}
+
+.searchTable{
+    float:left;
+    width:24%;
+    height:1000px;
+    border-style:groove;
+    border-radius:1px;
+    border-color:rgb(231, 228, 228);
+    outline-color:rgb(231, 228, 228);
+    background-color: white;
+    margin-top:26px;
+}
+
+.fanTable{
+    width:75%;
+    height:1000px;
+    margin-right:20px;
+    margin-top:47px;
+    border-style:groove;
+    border-color:rgb(231,228,228);
+    outline-color:rgb(231,228,228);
+    background-color:white;
+    
+}
+
+.buttonsDiv{
+    margin-left:10px;
+    margin-top:10px;
+}
+
+
+.searchBtn{
+    margin-left:10px;
+    color:white;
+    background-color: rgb(61, 58, 58);
+    border-color:rgb(61, 58, 58);
+    outline-color:rgb(61, 58, 58);
+}
+
+.clearBtn{
+    margin-left:20px;
+    color:white;
+    background-color:rgb(61, 58, 58);
+    border-color:rgb(61, 58, 58);
+    outline-color:rgb(61, 58, 58);
+}
+
+
+.fanData{
+    position: relative;
+    width:200px;
+    margin-bottom: 700px;
+    border-color:rgb(231, 228, 228);
+    border-style:groove;
+    border-radius: 1px;
+    background-color: white;
+    outline-color:rgb(231,228,228);
+}
+
+.imageDiv{
+    margin-left:10%;
+    height:90px;
+    width:80%;
+}
+
+.imagePic{
+    width:100%;
+    height:100%;
+}
+
+.modelDetails{
+    text-align: center;
+    line-height:10px;
+}
+
+.modelParam{
+    color:rgb(38, 92, 143);
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.runningDetails{
+    background-color:rgb(184, 179, 179);
+    text-align:center;
+}
+
+.runParam{
+    font-size:16px;
+    line-height:5px;
+}
+
+.runParamT{
+    font-size:16px;
+    line-height:5px;
+    margin-top:10px;
+}
+
+.runParamB{
+    font-size:16px;
+    line-height:5px;
+    margin-bottom:10px;
+}
+
+
+.form-group{
+    text-align: right;
+}
+
+.form-control{
+    width:100%;
+    line-height:20px;
+    margin-top:20px;
+}
+
+.modelYearInput{
+    width:40px;
+    line-height:8px;
+}
+
+.airflowInput{
+    width:40px;
+    line-height:8px;
+}
+
+.airflowRange{
+    width:80px;
+    line-height:8px;
+}
+
+.powerInput{
+    width:40px;
+    line-height:8px;
+}
+
+.powerRange{
+    width:80px;
+    line-height:8px;
+}
+
+.soundInput{
+    width:40px;
+    line-height:8px;
+}
+
+.soundRange{
+    width:80px;
+    line-height:8px;
+}
+
+.sweepInput{
+    width:40px;
+    line-height:8px;
+}
+
+.sweepRange{
+    width:80px;
+    line-height:8px;
+}
+
+.speedInput{
+    width:40px;
+    line-height:8px;
+}
+
+.speedRange{
+    width:80px;
+    line-height:8px;
+}
+
+.manufacturerInput{
+    width:100px;
+    line-height:8px;
+}
+
+.seriesInput{
+    width:120px;
+    line-height:8px;
+}
+
+.projectSelect{
+    float:right;
+}

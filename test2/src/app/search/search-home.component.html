@@ -1,0 +1,34 @@
+<div class="test">
+        <div class="userProject">
+        <button type="button" class="projectButton" (click)="goToProjects()">Projects</button>
+        <button type="menu" class="user" (click)="logout()"></button>
+        </div>
+        <div class="searchContainer">
+            <p class="centerTitle">JOOLE</p>
+            <p class="centerTitle1">Search Page</p>
+        <form (ngSubmit)="onSubmit(searchForm)" #searchForm="ngForm" class="form-inline well">
+            <div class="searchSelect">
+            <select class="searchSelect" [(ngModel)]="inputItem" name="typing" aria-placeholder="Mechanical">
+                <option *ngFor="let type of types" [value]="type">{{type}}</option>
+            </select>
+            </div>
+            <div class=".combobox">
+                <input type="text" placeholder="Search" 
+                class="combobox-input" [(ngModel)]="inputItem" [ngModelOptions]="{standalone: true}"
+                (ngModelChange)="getFilteredList()" (keyup)="onKeyPress($event)"
+                (blur)="toggleListDisplay(0)" (focus)="toggleListDisplay(1)"
+                [ngClass]="{'error': showError}">
+                <i *ngIf="showError" class="error-text">Invalid Selection.</i>
+                <div class="combobox-options" *ngIf="!listHidden">
+                    <list-item *ngFor="let item of filteredList;let i = index"
+                    [ngClass]="{'selected': i===selectedIndex}"
+                    (click)="selectItem(i)">
+                        {{item}}
+                    </list-item>
+                </div>
+                    <button type="submit" class="searchBtn" [disabled]="!searchForm.form.valid"></button>
+                </div>
+
+        </form>
+    
+    </div>
